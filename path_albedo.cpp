@@ -151,7 +151,7 @@ public:
 
 				/* Allocate a record for querying the BSDF */
 				BSDFSamplingRecord bRec(its, its.toLocal(dRec.d), ERadiance);
-
+				bRec.wo = Vector(0.0, 0.0, 1.0);
 				/* Evaluate BSDF * cos(theta) */
 				const Spectrum bsdfVal = bsdf->eval(bRec);
 
